@@ -22,8 +22,15 @@ jobs:
       - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
       - name: Build release APK
         working-directory: android
-        run: gradle assembleRelease --no-daemon
+        run: |
+          gradle assembleRelease --no-daemon
+          echo "Built APK files:"
+          find app/build/outputs/apk/release -maxdepth 1 -type f -name '*.apk' -print
+          test -f app/build/outputs/apk/release/app-release-unsigned.apk
+      - name: Prepare APK for artifact
+        run: cp android/app/build/outputs/apk/release/app-release-unsigned.apk android/app/build/outputs/apk/release/NAC-Quotation-Manager.apk
       - uses: actions/upload-artifact@v4
         with:
           name: NAC-Quotation-APK
-          path: android/app/build/outputs/apk/release/app-release.apk
+          path: android/app/build/outputs/apk/release/NAC-Quotation-Manager.apk
+          if-no-files-found: error
