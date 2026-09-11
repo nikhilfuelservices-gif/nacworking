@@ -1,0 +1,1 @@
+Trigger APK rebuild using the corrected artifact path.
