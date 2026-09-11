@@ -17,36 +17,36 @@
         android:fillColor="#00000000"
         android:strokeColor="#0B66D1"
         android:strokeWidth="7"
-        android:strokeLineCap="BUTT"
-        android:strokeLineJoin="MITER"
+        android:strokeLineCap="butt"
+        android:strokeLineJoin="miter"
         android:pathData="M22,69 L22,37 L46,69 L46,37" />
 
     <path
         android:fillColor="#00000000"
         android:strokeColor="#E51F2A"
         android:strokeWidth="7"
-        android:strokeLineCap="BUTT"
-        android:strokeLineJoin="MITER"
+        android:strokeLineCap="butt"
+        android:strokeLineJoin="miter"
         android:pathData="M54,69 L65,37 L76,69 M59,57 L71,57" />
 
     <path
         android:fillColor="#00000000"
         android:strokeColor="#0B57A6"
         android:strokeWidth="7"
-        android:strokeLineCap="ROUND"
+        android:strokeLineCap="round"
         android:pathData="M90,42 C84,34 72,34 66,42 C60,50 60,58 66,66 C72,74 84,74 90,66" />
 
     <path
         android:fillColor="#00000000"
         android:strokeColor="#12A7E8"
         android:strokeWidth="4"
-        android:strokeLineCap="ROUND"
+        android:strokeLineCap="round"
         android:pathData="M18,28 C38,15 60,15 91,28" />
 
     <path
         android:fillColor="#00000000"
         android:strokeColor="#12A7E8"
         android:strokeWidth="4"
-        android:strokeLineCap="ROUND"
+        android:strokeLineCap="round"
         android:pathData="M20,76 C40,90 63,90 88,76" />
 </vector>
