@@ -1,8 +1,10 @@
-name: Build NAC APK
+name: Build NAC Quotation APK
+
 on:
   workflow_dispatch:
   push:
     branches: [ main ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,8 +20,10 @@ jobs:
           gradle-version: '8.10.2'
       - run: yes | sdkmanager --licenses >/dev/null || true
       - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
-      - run: gradle assembleDebug --no-daemon
+      - name: Build release APK
+        working-directory: android
+        run: gradle assembleRelease --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: NAC-Quotation-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: android/app/build/outputs/apk/release/app-release.apk
